@@ -1,0 +1,11 @@
+<h1>Lista de Animales</h1>
+<ul *ngIf="animales.length > 0; else sinAnimales">
+  <li *ngFor="let animal of animales">
+    <strong>{{ animal.nombreComun }}</strong> (<em>{{ animal.nombreCientifico }}</em>)<br />
+    {{ animal.descripcion }}
+  </li>
+</ul>
+
+<ng-template #sinAnimales>
+  <p>No hay animales cargados.</p>
+</ng-template>

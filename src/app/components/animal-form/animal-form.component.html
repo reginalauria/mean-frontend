@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()" #animalForm="ngForm">
+    <div>
+      <label for="nombreComun">Nombre Común:</label>
+      <input name="nombreComun" [(ngModel)]="nombreComun" required />
+    </div>
+  
+    <div>
+      <label for="nombreCientifico">Nombre Científico:</label>
+      <input name="nombreCientifico" [(ngModel)]="nombreCientifico" required />
+    </div>
+  
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea name="descripcion" [(ngModel)]="descripcion"></textarea>
+    </div>
+  
+    <button type="submit">Agregar Animal</button>
+  </form>
+  
